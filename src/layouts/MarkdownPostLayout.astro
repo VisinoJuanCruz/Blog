@@ -1,0 +1,9 @@
+---
+const { frontmatter } = Astro.props;
+import Footer from "../components/Footer.astro";
+---
+<h1>{frontmatter.title}</h1>
+<p>Publicado el: {frontmatter.pubDate.slice(0,10)}</p>
+<p>Escrito por {frontmatter.author}</p>
+<slot />
+<Footer />
